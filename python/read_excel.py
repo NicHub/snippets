@@ -14,8 +14,10 @@ def read_excel(fpath, sheet_name):
 
 
 if __name__ == "__main__":
-    fpath = "read_excel_nogit.xlsx"
+    fpath = "read_excel.xlsx"
     sheet_name = "Sheet1"
     df = read_excel(fpath, sheet_name)
     print(df)
     print(df.dtypes)
+    dt = df["DATE"][1] - df["DATE"][0]
+    print(f"dt = {dt}")
