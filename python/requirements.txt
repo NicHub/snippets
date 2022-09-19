@@ -1,0 +1,11 @@
+# pip install -r requirements.txt
+# See: https://learnpython.com/blog/python-requirements-file/
+# pip freeze
+# pip list --outdated
+# pip install pipupgrade
+# pipupgrade --verbose --latest --yes
+
+pandas
+weasyprint
+qrcode
+pillow
