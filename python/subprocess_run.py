@@ -5,7 +5,7 @@ import subprocess
 
 
 def main():
-    """ ___ """
+    """___"""
     print("\n# 1")
     cmd = ["echo", "Sésame, ouvre-toi !"]
     subprocess.run(cmd)

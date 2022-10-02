@@ -1,21 +1,49 @@
 """
 
+https://docs.python.org/3/library/os.html#os.walk
+
+# NOTES
+
+    topdown = True
+    L’arborescence des répertoires est parcourue depuis le sommet
+    topdown = False
+    L’arborescence des répertoires est parcourue depuis les racines
+
+    `sort()` is faster than `sorted`
+    https://pythonsimplified.com/difference-between-sort-and-sorted-in-python/
+
 """
 import os
+from pprint import pprint
 
 
-def walk(path_to_walk):
-    """ ___ """
-    for root, _, files in os.walk(path_to_walk, topdown=False):
-        for fname in files:
-            if fname in [".DS_Store"]:
+def walk(pathtowalk):
+    """___"""
+    filepaths = []
+    for dirpath, dirnames, filenames in os.walk(pathtowalk):
+        # Filter out unwanted directories.
+        unwanted_dirnames = [".git", "temp"]
+        for unwanted_dirname in unwanted_dirnames:
+            if unwanted_dirname in dirnames:
+                dirnames.remove(unwanted_dirname)
+        for filename in filenames:
+            # Filter out unwanted file names.
+            if filename in [".DS_Store"]:
                 continue
-            _, ext = os.path.splitext(fname)
-            if ext in [".jpg"]:
-                fpath = os.path.join(root, fname)
-                print(fpath)
+            # Filter out unwanted file extensions.
+            _, ext = os.path.splitext(filename)
+            if ext not in [".jpeg"]:
+                continue
+            filepath = os.path.join(dirpath, filename)
+            filepaths.append(filepath)
+
+    # Sort alphabetically.
+    filepaths.sort(key=str.lower)
+    return filepaths
 
 
 if __name__ == "__main__":
-    path_to_walk = os.path.expanduser("~")
-    walk(path_to_walk)
+    pathtowalk = "~/erx-s3/erx-technical-documentation/"
+    pathtowalk = os.path.expanduser(pathtowalk)
+    filepaths = walk(pathtowalk)
+    pprint(filepaths)
