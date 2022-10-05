@@ -2,9 +2,9 @@
 
 """
 
-def write_file(file_name, content):
+def write_file(filename, content):
     """ ___ """
-    with open(file_name, "wt") as _f:
+    with open(filename, mode="wt", encoding="utf-8") as _f:
         _f.write(content)
 
 
