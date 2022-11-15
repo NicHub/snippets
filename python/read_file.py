@@ -11,18 +11,19 @@
 "b" — Binary — Binary mode (e.g. images)
 
 """
+#%%
 
 
-def read_small_file(file_name):
-    """ ___ """
-    with open(file_name, "rt") as _f:
+def read_small_file(filename):
+    """___"""
+    with open(filename, "rt") as _f:
         full_content = _f.read()
     print(full_content)
 
 
-def read_big_file(file_name):
-    """ ___ """
-    with open(file_name, "rt") as _f:
+def read_big_file(filename):
+    """___"""
+    with open(filename, "rt") as _f:
         for line in _f:
             print(line.strip())
 
