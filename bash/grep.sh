@@ -4,3 +4,6 @@
 # L’option I ignore les fichiers binaires.
 # L’option -s désactive les messages d’avertissement.
 grep -riIls --include="*.txt" --include="*.php" "StringToSearch" `pwd`
+
+grep -rils "eco" ~/Library/Mail/V10/ --include="*.pdf"
+

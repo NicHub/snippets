@@ -3,9 +3,9 @@
 ##
 
 shopt -s nullglob
-cd ~/erx-s3/erx-nozzles/booms/flowduino/plots-nogit
+[[ ! -d $1 ]] && ( echo "Provide a path to a directory with PNGs inside" ; exit 1 )
+cd $1
 FILE_NAMES=(*.png)
-
 for file_name in "${FILE_NAMES[@]}"; do
     echo -e "\n\n\n"
     pngquant                       \
@@ -19,4 +19,3 @@ for file_name in "${FILE_NAMES[@]}"; do
         --output "$file_name"      \
         "$file_name"
 done
-
