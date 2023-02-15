@@ -1,12 +1,17 @@
 # python3 -m pip install --upgrade pip
-# pip3 install -r requirements.txt
+# python3 -m pip install -r requirements.txt
 # See: https://learnpython.com/blog/python-requirements-file/
-# pip freeze
-# pip list --outdated
-# pip install pipupgrade
-# pipupgrade --verbose --latest --yes
+# python3 -m pip freeze
+# python3 -m pip list --outdated
+# python3 -m pip  install pipupgrade
+# python3 -m pipupgrade --verbose --latest --yes
 
 pandas
-weasyprint
-qrcode
+# weasyprint
+# qrcode
 pillow
+numpy
+scipy
+matplotlib
+bokeh
+black

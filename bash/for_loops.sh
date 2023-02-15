@@ -1,6 +1,4 @@
-###
-#
-##
+#!/usr/bin/env bash
 
 ARRAY=(
     "#47704C"
