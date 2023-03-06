@@ -36,4 +36,4 @@ if __name__ == "__main__":
     print("\n# strptime WITH time")
     print(time.strptime("2023-02-07_15-35-47", "%Y-%m-%d_%H-%M-%S"))
     print(time.strptime("2023-02-07T15:35:47", "%Y-%m-%dT%H:%M:%S"))
-    # print(time.strptime("2023-02-07 15:35:47.1675781099", "%Y-%m-%d %H:%M:%S.%s"))
+    print(time.strptime("2023-02-07 12:34:56.999999", "%Y-%m-%d %H:%M:%S.%f"))
