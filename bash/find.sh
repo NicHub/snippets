@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 cd /Users/nico/erx-s3/erx-technical-documentation/13-DOC-ARA
+
 find `pwd` -type f -iname "*.pdf"
 
 find `pwd` -type f \( -name "*conflicted copy*" \) -exec md5sum {} \;;
