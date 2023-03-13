@@ -7,10 +7,10 @@ ARRAY=(
     "#FFF200"
 )
 
-# echo "for loop #1"
-# for _i in ${!ARRAY[@]}; do
-#     echo "${_i}) ${ARRAY[${_i}]}"
-# done
+echo "for loop #1"
+for _i in ${!ARRAY[@]}; do
+    echo "${_i}) ${ARRAY[${_i}]}"
+done
 
 echo -e "\nfor loop #2"
 for (( _i = 0 ; _i < ${#ARRAY[@]} ; _i++ )) do
