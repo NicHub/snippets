@@ -8,14 +8,14 @@ cd $1
 FILE_NAMES=(*.png)
 for file_name in "${FILE_NAMES[@]}"; do
     echo -e "\n\n\n"
-    pngquant                       \
-        --strip                    \
-        --speed 1                  \
-        --verbose                  \
-        --force                    \
-        --skip-if-larger           \
-        --quality 0-2              \
-        10                         \
-        --output "$file_name"      \
+    pngquant                          \
+        --strip                       \
+        --speed 1                     \
+        --verbose                     \
+        --force                       \
+        --skip-if-larger              \
+        --quality 0-2                 \
+        100                           \
+        --output "$file_name-out.png" \
         "$file_name"
 done

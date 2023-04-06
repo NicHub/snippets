@@ -2,6 +2,9 @@
 
 https://docs.python.org/3/library/subprocess.html
 
+Consider the use of “invoke” instead of subprocess:
+https://www.pyinvoke.org/
+
 """
 import subprocess
 
