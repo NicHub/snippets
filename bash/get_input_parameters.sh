@@ -30,3 +30,37 @@ done
 echo "OPT_D = ${OPT_D}"
 echo "OPT_C = ${OPT_C}"
 echo "OPT_W = ${OPT_W}"
+
+
+
+
+# #####################
+
+
+
+
+DRY_RUN=""
+while getopts ':d' arguments; do
+    case "${arguments}" in
+        d) DRY_RUN="--dry-run" ;;
+    esac
+done
+
+SOURCE_DIR=.
+TARGET_DIR=/Volumes/CIRCUITPY
+
+ARGS=(
+    " sync"
+    " $SOURCE_DIR"
+    " $TARGET_DIR"
+    " --progress"
+    " --verbose"
+    " --skip-links"
+    " --modify-window 2s"
+    " --filter-from $SOURCE_DIR/rclonefilter"
+    " --update"
+    " --stats-file-name-length 0"
+    " $DRY_RUN"
+)
+
+rclone ${ARGS[@]}
