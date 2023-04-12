@@ -11,3 +11,5 @@ find `pwd` -type f \( -iname "*.png" -or -iname "*.jp*g" \) -exec md5sum {} \;;
 find `pwd` -type f -iname "*.png" -or -iname "*.jp*g"
 
 find `pwd` -type f -iname "*.xls" -or -iname "*.xlsx" -or -iname "*.ods"
+
+find `pwd` -type f -iname "*date*" -or -iname "*anniversaire*" -or -iname "*famille*"

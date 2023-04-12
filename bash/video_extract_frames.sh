@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-# https://stackoverflow.com/a/42827058
+# https://superuser.com/a/1696985/508141
 
 shopt -s expand_aliases
 alias ll='ls -lGhF'
 
+
 FILEIN="$HOME/Desktop/dust/in.webm"
-FILEOUT="$HOME/Desktop/dust/out.webm"
-# -y Overwrite output files without asking.
+FILEOUT="$HOME/Desktop/dust/%06d.bmp"
+
 ffmpeg                 \
-    -y                 \
+    -vsync 0           \
     -ss 00:08:37       \
     -to 00:09:37       \
     -i "$FILEIN"       \
-    -c copy "$FILEOUT"
-
+    $FILEOUT
