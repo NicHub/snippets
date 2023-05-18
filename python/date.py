@@ -5,6 +5,11 @@ https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-cod
 
 time | strftime() and strptime() Format Codes
 https://docs.python.org/3/library/time.html#time.strftime
+
+
+clock
+https://blog.adafruit.com/2022/05/27/john-parks-circuitpython-parsec-setting-real-time-clock-with-ntp-timeserver-adafruit-johnedgarpark-adafruit-circuitpython/
+
 """
 
 import datetime

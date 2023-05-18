@@ -5,5 +5,6 @@
 # L’option -s désactive les messages d’avertissement.
 grep -riIls --include="*.txt" --include="*.php" "StringToSearch" `pwd`
 
-grep -rils "eco" ~/Library/Mail/V10/ --include="*.pdf"
+grep -rils "eco" $HOME/Library/Mail/V10/ --include="*.pdf"
 
+grep -rils "nano" $HOME/Documents/PlatformIO/Projects/ --include="*.ini"

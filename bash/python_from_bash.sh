@@ -28,10 +28,13 @@ echo $TIC
 
 
 echo 'Hello!' | python -c "import sys;d=sys.stdin.read(); print('{}\n'.format(d))"
+
 echo 'Hello!' | python -c "import sys;d=sys.stdin.read(); print(d[::-1])"
+
 ls | python -c "import sys;d=sys.stdin.read(); print(d[::-1])"
+
 ls | python -c "import sys;d=sys.stdin.read(); print(d)"
 
 python -c 'import datetime as dt; localnow = dt.datetime.now().astimezone(); print(localnow.strftime("%Y-%m-%dT%H:%M:%S.%f%z"))'
 
-
+torsocks wget -qO- https://check.torproject.org/api/ip | python -c 'import sys; s=sys.stdin.read(); import json; print(json.loads(s)["IP"]);'
