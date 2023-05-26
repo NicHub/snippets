@@ -38,3 +38,10 @@ ls | python -c "import sys;d=sys.stdin.read(); print(d)"
 python -c 'import datetime as dt; localnow = dt.datetime.now().astimezone(); print(localnow.strftime("%Y-%m-%dT%H:%M:%S.%f%z"))'
 
 torsocks wget -qO- https://check.torproject.org/api/ip | python -c 'import sys; s=sys.stdin.read(); import json; print(json.loads(s)["IP"]);'
+
+IFS='' read -r -d '' SCRIPT << EOF
+import os
+print(os.listdir())
+print("This is a heredoc script")
+EOF
+python -c "$SCRIPT"

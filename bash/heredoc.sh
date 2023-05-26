@@ -12,6 +12,7 @@ EOF
 
 # Echo with indentation
 echo "$VAR"
+echo "${VAR}"
 
 # Echo without indentation
 echo $VAR
