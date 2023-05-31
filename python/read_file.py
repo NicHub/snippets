@@ -16,14 +16,15 @@
 
 def read_small_file(filename):
     """___"""
-    with open(filename, "rt") as _f:
+    with open(filename, "rt", encoding="utf-8") as _f:
         full_content = _f.read()
+        full_content = _f.split("\n")
     print(full_content)
 
 
 def read_big_file(filename):
     """___"""
-    with open(filename, "rt") as _f:
+    with open(filename, "rt", encoding="utf-8") as _f:
         for line in _f:
             print(line.strip())
 

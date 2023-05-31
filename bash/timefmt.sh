@@ -22,3 +22,5 @@ echo $dT
 # TIMEFMT=$'\nElapsed time: %E'
 
 # $'\nElapsed time: %E' time sleep 2
+
+ls > $(date "+%Y-%m-%d_%H-%M-%S_prop.txt")
