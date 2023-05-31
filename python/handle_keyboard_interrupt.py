@@ -5,18 +5,19 @@ handle_keyboard_interrupt
 """
 
 import signal
-import sys
 import time
 
 KEYBOARD_INTERRUPT = False
 
-def exit_func(*argv):
+
+def sigint_handler(signal, frame):
+    """___"""
     global KEYBOARD_INTERRUPT
     KEYBOARD_INTERRUPT = True
     print("\b \b" * 2, end="", flush=True)
 
 
-signal.signal(signal.SIGINT, exit_func)
+signal.signal(signal.SIGINT, sigint_handler)
 
 
 def main():
@@ -28,15 +29,13 @@ def main():
         time.sleep(0.05)
     for _ in range(10):
         print("\b \b", end="", flush=True)
-        if KEYBOARD_INTERRUPT:
-            continue
-        time.sleep(0.05)
+        if not KEYBOARD_INTERRUPT:
+            time.sleep(0.05)
 
 
 if __name__ == "__main__":
-    sys.stdin = open('stdout.txt', 'w')
     while True:
         main()
         if KEYBOARD_INTERRUPT:
             print("\nKEYBOARD_INTERRUPT detected, stop program.")
-            sys.exit(0)
+            break
