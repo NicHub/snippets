@@ -1,10 +1,7 @@
-// remove_ctrl_c.c
-// gcc remove_ctrl_c.c -o remove_ctrl_c && ./remove_ctrl_c
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
+    remove_ctrl_c.c
+    gcc remove_ctrl_c.c -o remove_ctrl_c && ./remove_ctrl_c
+
     Remove the characters ^C with ANSI escape codes.
     (see https://en.wikipedia.org/wiki/ANSI_escape_code)
 
@@ -24,13 +21,17 @@
     Note that, as the printf command is buffered,
     we need to use the fflush command before the end
     of the program to force stdout to be updated.
-
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+
+volatile sig_atomic_t KEYBOARD_INTERRUPT = 0;
+
 void handleSignal(int signal)
 {
-    printf("\b\b\033[K\n");
-    fflush(stdout);
-    exit(EXIT_SUCCESS);
+    KEYBOARD_INTERRUPT = 1;
 }
 
 int main()
@@ -38,8 +39,10 @@ int main()
     signal(SIGINT, handleSignal);
     printf("Remove ^C on exit!");
     fflush(stdout);
-    while (1)
+    while (!KEYBOARD_INTERRUPT)
     {
     }
+    printf("\b\b\033[K\n");
+    fflush(stdout);
     return 0;
 }
