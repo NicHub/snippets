@@ -1,1 +1,2 @@
-remove_ctrl_c/remove_ctrl_c
+remove_ctrl_c
+!remove_ctrl_c.*

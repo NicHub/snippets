@@ -29,14 +29,14 @@
 
 volatile sig_atomic_t KEYBOARD_INTERRUPT = 0;
 
-void handleSignal(int signal)
+void sigintHandler(int signal)
 {
     KEYBOARD_INTERRUPT = 1;
 }
 
 int main()
 {
-    signal(SIGINT, handleSignal);
+    signal(SIGINT, sigintHandler);
     printf("Remove ^C on exit!");
     fflush(stdout);
     while (!KEYBOARD_INTERRUPT)

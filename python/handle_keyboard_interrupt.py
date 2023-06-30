@@ -1,41 +1,32 @@
-"""
-
-handle_keyboard_interrupt
-
-"""
-
 import signal
-import time
-
-KEYBOARD_INTERRUPT = False
+from time import sleep
 
 
-def sigint_handler(signal, frame):
-    """___"""
-    global KEYBOARD_INTERRUPT
-    KEYBOARD_INTERRUPT = True
-    print("\b \b" * 2, end="", flush=True)
+def __quit_gracefully(_, __):
+    # Do here whatever is needed to quit the program gracefully.
+    print("\b\b\033[K", end="", flush=True)
+    exit(0)
 
 
-signal.signal(signal.SIGINT, sigint_handler)
+def __quit_gracefully_init():
+    # Choose the signals that will stop the program if they are
+    # available on the current platform.
+    # E.g. SIGQUIT is available on macOS but not on Windows.
+    signal_names = [
+        signal_name
+        for signal_name in ("SIGINT", "SIGQUIT", "SIGTERM")
+        if signal_name in dir(signal.Signals)
+    ]
+    # Assign handler to signals.
+    for signal_name in signal_names:
+        signal.signal(getattr(signal, signal_name), __quit_gracefully)
 
 
 def main():
-    """___"""
-    for _ in range(10):
-        if KEYBOARD_INTERRUPT:
-            break
-        print("░", end="", flush=True)
-        time.sleep(0.05)
-    for _ in range(10):
-        print("\b \b", end="", flush=True)
-        if not KEYBOARD_INTERRUPT:
-            time.sleep(0.05)
+    sleep(60)
 
 
 if __name__ == "__main__":
+    __quit_gracefully_init()
     while True:
         main()
-        if KEYBOARD_INTERRUPT:
-            print("\nKEYBOARD_INTERRUPT detected, stop program.")
-            break
