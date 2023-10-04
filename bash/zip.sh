@@ -8,6 +8,6 @@
 zip -9er filename.zip dir2 dir4 -x "*.DS_Store"
 
 # recursive zip
-cd /Users/nico/Desktop/
-DIRNAME=rome-frais-nicolas-jeanmonod
+cd /Users/nico/Documents/sante/tension-arterielle/
+DIRNAME=tension-arterielle-nicolas-jeanmonod
 zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*"

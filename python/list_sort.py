@@ -9,6 +9,6 @@ _l = [5, 2, 3, 1, 4]
 print(sorted(_l))
 print(_l)
 
-# The `sort()` method, sorts in place.
+# The `sort()` method, sorts in place.
 _l.sort()
 print(_l)

@@ -6,6 +6,7 @@ https://www.pyinvoke.org/
 
 from invoke import run
 
+
 def get_ffmpeg_path():
     """___"""
     cmd = "which ffmpeg"
@@ -14,7 +15,7 @@ def get_ffmpeg_path():
         raise Exception("FFMPEG not found in $PATH. Bye !")
     return result
 
+
 if __name__ == "__main__":
     result = get_ffmpeg_path()
     print(result.stdout)
-
