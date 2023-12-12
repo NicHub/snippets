@@ -7,16 +7,17 @@ import math
 
 
 def tictoc(func):
-    """
-    Decorator to measure the execution time of a function.
-    """
+    """Decorator to measure the execution time of a function."""
 
     def inner1(*args, **kwargs):
         begin = time.time()
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
         end = time.time()
-        msg = f"Time elapsed in `{func.__name__}`: {end - begin:0.3f} s"
-        print(msg)
+        silent = False
+        if not silent:
+            msg = f"Time elapsed in `{func.__name__}`: {end - begin:0.3f} s"
+            print(msg)
+        return result
 
     return inner1
 

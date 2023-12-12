@@ -15,8 +15,15 @@ def init_logger():
         stream=sys.stdout,
         format="%(levelno)s " "%(module)-11s " "%(lineno)3s. " "%(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
-        level=logging.INFO
+        level=logging.DEBUG,
     )
+
+    # https://stackoverflow.com/a/66345269/3057377
+    # Silence other loggers
+    for log_name, log_obj in logging.Logger.manager.loggerDict.items():
+        logging.getLogger(log_name).setLevel(logging.CRITICAL)
+
+    # print_msg(1)
 
 
 def print_msg(id):
