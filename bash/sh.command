@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-# chmod a+x command.command
+# chmod a+x sh.command
 
 echo "PID = $$"
 

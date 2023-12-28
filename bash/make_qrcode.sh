@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # qrcode installation :
 # sudo pip install qrcode pillow

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # http://tldp.org/LDP/abs/html/fto.html
 # 7.2. File test operators

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Zip with password
 # The -e flag specifies encryption is to be used on the zipfile; you’ll be prompted for a password.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 echo $$ > pid_infinite_loop_nogit.txt
 printf "\n\n"

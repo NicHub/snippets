@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 cd /Users/nico/erx-s3/erx-technical-documentation/13-DOC-ARA
 
