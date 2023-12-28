@@ -16,6 +16,7 @@ find `pwd` -type f -iname "*date*" -or -iname "*anniversaire*" -or -iname "*fami
 
 find `pwd` -type f -name "boards.txt"
 
+find `pwd` -type d -name ".git"
 find `pwd` -type f -perm +111 ! \( -path '*/.git/*' -or -path '*/site-web-v4/*' \) -exec ls -la {} \;;
 find `pwd` -type f -perm +111 ! \( -path '*/.git/*' -or -path '*/site-web-v4/*' \) -exec chmod a-x {} \;;
 
