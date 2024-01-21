@@ -13,6 +13,11 @@
 """
 
 
+def read_file_short(filename):
+    full_content = open(filename, "rt", encoding="utf-8").read()
+    print(full_content)
+
+
 def read_small_file(filename):
     """___"""
     with open(filename, "rt", encoding="utf-8") as _f:
@@ -31,5 +36,6 @@ def read_big_file(filename):
 
 
 if __name__ == "__main__":
-    read_small_file(__file__)
+    # read_small_file(__file__)
     # read_big_file(__file__)
+    read_file_short(__file__)

@@ -11,3 +11,4 @@ grep -rils "nano" $HOME/Documents/PlatformIO/Projects/ --include="*.ini"
 
 grep -rIls --include="*.py" "kWh" `pwd`
 grep -rls --include="*.ods" --include="*.xlsx" "kWh" `pwd`
+grep -rls --include="*.py" "import logging" `pwd`
