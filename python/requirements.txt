@@ -8,6 +8,10 @@
 
 black
 bokeh
+ipykernel
+ipython
+jupyter_client
+jupyter_core
 manim
 matplotlib
 numpy
@@ -16,11 +20,7 @@ pandas
 pillow
 pyserial
 scipy
-ipykernel
-ipython
-jupyter_client
-jupyter_core
-
+setuptools
 
 # qrcode
 # weasyprint

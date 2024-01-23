@@ -17,7 +17,9 @@ https://www.alpharithms.com/noqa-python-501210/
 
 
 
-
+dans YAML
+https://prettier.io/docs/en/ignore.html
+# prettier-ignore
 
 
 
