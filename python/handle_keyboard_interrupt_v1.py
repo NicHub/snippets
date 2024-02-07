@@ -6,8 +6,9 @@ def quit_gracefully(_, __):
     exit(0)
 
 
-def quit_gracefully_init(func):
+def quit_gracefully_init(callback):
 
+    # List of signals to which the handler will be assigned.
     signal_names = ("SIGINT", "SIGQUIT", "SIGTERM")
 
     # Remove signals that are not available on the current platform.
@@ -20,7 +21,7 @@ def quit_gracefully_init(func):
 
     # Assign handler to signals.
     for signal_name in signal_names:
-        signal.signal(getattr(signal, signal_name), func)
+        signal.signal(getattr(signal, signal_name), callback)
 
 
 def main():
