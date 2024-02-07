@@ -12,3 +12,6 @@ zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*"
 
 DIRNAME=videowall
 zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
+
+DIRNAME=factures_aws_impayees
+zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"

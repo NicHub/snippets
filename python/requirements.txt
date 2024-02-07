@@ -8,6 +8,7 @@
 
 black
 bokeh
+beautifulsoup4
 ipykernel
 ipython
 jupyter_client
