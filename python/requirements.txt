@@ -23,6 +23,7 @@ pyserial
 scipy
 setuptools
 streamlit
+wolframclient
 
 # https://automatetheboringstuff.com/chapter18/
 # pyautogui

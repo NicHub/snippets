@@ -53,10 +53,10 @@ import os  # noqa: F401, E402, E303
 
 
 def foo():
-    pass
+    pass  # noqa E101:
 
 def foo():  # noqa:
-    pass
+    pass  # noqa E101:
 
 x=5  # noqa: E225, E305
 
