@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-cd /Users/nico/erx-s3/erx-technical-documentation/13-DOC-ARA
 
 find `pwd` -type f -iname "*.pdf"
 
@@ -20,10 +19,10 @@ find `pwd` -type d -name ".git"
 find `pwd` -type f -perm +111 ! \( -path '*/.git/*' -or -path '*/site-web-v4/*' \) -exec ls -la {} \;;
 find `pwd` -type f -perm +111 ! \( -path '*/.git/*' -or -path '*/site-web-v4/*' \) -exec chmod a-x {} \;;
 
-cd "/Users/nico/erx-s3/"
-find `pwd` -type d -name ".pio" -or -name ".vscode"
 
-cd "/Users/nico/erx-s3/"
+find `pwd` -type d -name ".pio" -or -name ".vscode"
+find `pwd` -type d -name "cnl-spirit"
+
 find `pwd` -type f -empty ! -name '__init__.py' ! -name 'FETCH_HEAD'
 
 find `pwd` -type f -size +1G

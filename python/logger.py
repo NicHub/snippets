@@ -18,9 +18,9 @@ def init_logger():
         level=logging.DEBUG,
     )
 
+    # Silencing other loggers.
     # https://stackoverflow.com/a/66345269/3057377
-    # Silence other loggers
-    for log_name, log_obj in logging.Logger.manager.loggerDict.items():
+    for log_name, _ in logging.Logger.manager.loggerDict.items():
         print(f"log_name = {log_name}")
         logging.getLogger(log_name).setLevel(logging.CRITICAL)
 

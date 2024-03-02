@@ -17,6 +17,7 @@ jupyter_core
 matplotlib
 numpy
 openai
+opencv-python
 pandas
 pillow
 pyserial
