@@ -15,7 +15,7 @@ for file_name in "${FILE_NAMES[@]}"; do
         --force                       \
         --skip-if-larger              \
         --quality 0-2                 \
-        3                             \
+        2                             \
         --output "$file_name-out.png" \
         "$file_name"
 done
