@@ -1,10 +1,15 @@
 """
+
+VSCode default formater: autopep8 (mais j’utilise black)
+VSCode default linter: pylint
+
+
 Make Black ignore some code
 
 # fmt: off
 # fmt: on
 
-
+Pylint
 no quality assurance => no linting
 # noqa
 
@@ -61,3 +66,10 @@ def foo():  # noqa:
 x=5  # noqa: E225, E305
 
 print("46 equals 2 = ", 46 == 2)
+
+
+# fmt: off
+"""
+%run demo.py arg1 arg2
+""";  # noqa: E703
+# fmt: on
