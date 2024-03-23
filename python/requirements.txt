@@ -9,6 +9,7 @@
 black
 bokeh
 beautifulsoup4
+invoke
 ipykernel
 ipython
 jupyter_client
@@ -24,6 +25,8 @@ pyserial
 scipy
 setuptools
 streamlit
+yt-dlp
+watchdog
 wolframclient
 
 # https://automatetheboringstuff.com/chapter18/
