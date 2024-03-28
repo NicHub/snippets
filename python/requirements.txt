@@ -20,6 +20,7 @@ numpy
 openai
 opencv-python
 pandas
+pendulum
 pillow
 pyserial
 scipy

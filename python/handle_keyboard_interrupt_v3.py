@@ -1,5 +1,5 @@
 """
-
+Exit code → 130 (Interrupted)
 """
 
 import atexit
@@ -17,9 +17,11 @@ def gracefull_KeyboardInterrupt():
         else None
     )
 
+
 @atexit.register
 def goodbye():
     print("\033[E" "That’s all Folks!", end="", flush=True)
+
 
 if __name__ == "__main__":
     gracefull_KeyboardInterrupt()

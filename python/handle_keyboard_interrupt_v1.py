@@ -1,3 +1,7 @@
+"""
+Exit code → 0
+"""
+
 import signal
 
 

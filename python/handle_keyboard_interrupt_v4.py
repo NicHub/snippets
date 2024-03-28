@@ -1,4 +1,6 @@
 """
+Exit code → 130 (Interrupted)
+
 See also:
 https://www.pythonpool.com/keyboardinterrupt/
 """
