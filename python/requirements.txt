@@ -14,7 +14,7 @@ ipykernel
 ipython
 jupyter_client
 jupyter_core
-# manim
+manim
 matplotlib
 numpy
 openai

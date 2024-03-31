@@ -1,12 +1,19 @@
 """
 Exit code → 0
+
+ANSI escape code
+https://en.wikipedia.org/wiki/ANSI_escape_code
+
+\r        carriage return => moves the cursor at the begining of the line
+\033[2K   clears the line
 """
 
 import signal
 
 
 def quit_gracefully(_, __):
-    print("\r" "\033[2K", end="", flush=True)
+    # print("\r" "\033[2K", end="", flush=True)
+    print("\0D" "\033[2K", end="", flush=True)
     exit(0)
 
 
