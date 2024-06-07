@@ -6,9 +6,9 @@
 # python3 -m pip  install pipupgrade
 # python3 -m pipupgrade --verbose --latest --yes
 
+beautifulsoup4
 black
 bokeh
-beautifulsoup4
 invoke
 ipykernel
 ipython
@@ -21,14 +21,20 @@ openai
 opencv-python
 pandas
 pendulum
-pillow
+Pillow
+pint
 pyserial
+PyYAML
 scipy
 setuptools
 streamlit
-yt-dlp
+types-PyYAML
+types-requests
+uncertainties
 watchdog
-wolframclient
+yt-dlp
+
+# wolframclient
 
 # https://automatetheboringstuff.com/chapter18/
 # pyautogui

@@ -1,0 +1,192 @@
+setopt INTERACTIVE_COMMENTS
+setopt AUTO_CD
+
+###
+# https://gist.github.com/NicHub/878f96c6af153d53a07e7cfe49afddfd
+# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
+##
+
+###
+# Left prompt
+##
+P=(
+    $'\n'
+    "😈  "
+    "%D{%H:%M:%S}"    # Time
+    " – "             # –
+    "%B"              # Bold
+    "%F{88}"          # Color red
+    "%n"              # User
+    "@"               # @
+    "%m"              # hostname
+    "%f"              # Stop color
+    "%b"              # Stop bold
+    ":"               # :
+    "%1~"             # Current directory
+    " > "             # >
+)
+PROMPT="${(j::)P}"
+unset P
+source $HOME/headline.zsh-theme
+
+###
+# Override keyboard shortcuts.
+##
+bindkey \^U backward-kill-line
+
+###
+# Update clock in left prompt.
+##
+setopt PROMPT_SUBST
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
+
+###
+# TIMEFORMAT
+# https://zsh.sourceforge.io/Doc/Release/Parameters.html
+##
+TIMEFMT=$'\nElapsed time: %E'
+
+###
+# HISTORY
+##
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
+###
+# Alias
+# To retrieve the definition of an alias type `type ll` (where `ll` is the alias)
+##
+
+alias ll='ls -lGhF'
+alias la='ll -a'
+alias gs='git status'
+alias gd='git difftool'
+alias gv='git config --get remote.origin.url && git config --get remote.origin.url | pbcopy'
+alias rpisshready='RPI=raspberrypi.local; until nc -zw 2 $RPI 22; echo `date "+%Y-%m-%d %H-%M-%S"`; do sleep 2; done; ping -c1 $RPI'
+alias rpisshlogin='rpisshready; ssh rpi'
+alias sha='shasum -a 256'
+alias nw='/Applications/nwjs.app/Contents/MacOS/nwjs'
+alias inkscape="/Applications/Inkscape.app/Contents/MacOS/Inkscape"
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias slic3r='/Applications/Slic3r.app/Contents/MacOS/slic3r'
+alias lynx='lynx --display_charset=utf8'
+alias msp430-gcc='/Applications/Energia.app/Contents/Resources/Java/hardware/tools/msp430/bin/msp430-gcc'
+alias chromedev="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
+alias vb="VirtualBoxVM --startvm Win10_1809Oct_French_x64"
+alias tiff2pdf='file=`date "+%Y-%m-%d_%H-%M-%S_out.pdf"`; gm convert *.tiff -monochrome -compress Fax $file && open $file'
+alias gpsd=/usr/local/Cellar/gpsd/3.17/sbin/gpsd
+alias gpsdctl=/usr/local/Cellar/gpsd/3.17/sbin/gpsdctl
+alias du.py='python3 ~/Public/nicotools/disk_usage/disk_usage.py'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias lsserial='python3 ~/Public/nicotools/lsserial/lsserial.py'
+alias blender='/Applications/Blender.app/Contents/MacOS/Blender'
+alias get_img_info='python3 ~/Public/nicotools/get_img_info/get_img_info.py'
+alias esptool.py='/Applications/Thonny.app/Contents/Frameworks/Python.framework/Versions/3.10/bin/esptool.py'
+alias markdown-link-check='~/node_modules/markdown-link-check/markdown-link-check'
+alias blc='~/node_modules/broken-link-checker/bin/blc'
+alias pip='python3 -m pip'
+
+###
+# Create virtual environment for python3 (once)
+# cd $HOME && /opt/homebrew/bin/python3 -m venv pythonenvnico
+# or cd $HOME && /opt/homebrew/Cellar/python@3.12/3.12.0/bin/python3.12 -m venv pyve12
+# or cd $HOME && /opt/homebrew/Cellar/python@3.11/3.11.6_1/bin/python3.11 -m venv pyve11
+# or cd $HOME && /opt/homebrew/Cellar/python@3.10/3.10.13_1/bin/python3.10 -m venv pyve10
+# or cd $HOME && /opt/homebrew/Cellar/python@3.9/3.9.18_1/bin/python3.9 -m venv pyve9
+# and activate it (for each terminal)
+# Use `deactivate` to manualy deactivate the virtual environment.
+# Install iPython in virtual env:
+# python3 -m pip install ipython
+##
+VENVPATH="$HOME/pyve12"
+# VENVPATH="/Users/nico/kdnicomac/boulot/2023-11-01_sensdesprenoms-livre/4-tools/pyve-sensdesprenoms/"
+if [[ -f "$VENVPATH/bin/activate" ]]; then source "$VENVPATH/bin/activate"; fi
+if [[ -f "$VENVPATH/bin/ipython3" ]]; then alias ipython="$VENVPATH/bin/ipython3"; fi
+if [[ -f "$VENVPATH/bin/ipython3" ]]; then alias ipython3="$VENVPATH/bin/ipython3"; fi
+
+# Change location of __pycache__
+# https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPYCACHEPREFIX
+# https://www.scivision.dev/python-pycache-eliminate/
+PYTHONPYCACHEPREFIX=${TMPDIR}
+
+###
+# nicotools
+##
+export PATH=$PATH:~/Public/nicotools/
+
+###
+# PlatformIO
+##
+export PATH=$PATH:~/.platformio/penv/bin
+
+###
+# Calibre
+##
+export PATH=$PATH:/Applications/calibre.app/Contents/MacOS/
+
+###
+# Variables autre que PATH
+##
+export EDITOR=nano  # Default terminal editor
+
+###
+# Get IP address of default interface
+##
+function getIPofDefaultInterface()
+{
+    local  __resultvar=$1
+
+    # Get default route interface
+    if=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}')
+    if [ -n "$if" ]; then
+        # Get IP of the default route interface
+        local __IP=$( ipconfig getifaddr $if )
+        eval $__resultvar="'$__IP'"
+    else
+        # echo "No default route found"
+        eval $__resultvar="'0.0.0.0'"
+    fi
+}
+
+alias ip='getIPofDefaultInterface IP; echo $IP'
+
+# Get external IP
+alias extip='EXTIP=`dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com` && EXTIP=${EXTIP:1:-1} && echo $EXTIP'
+# EXTIP=`dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com` && EXTIP=${EXTIP:1:-1}
+# torsocks wget -qO- https://check.torproject.org/api/ip | python -c 'import sys,json; _i=sys.stdin.read(); _o=json.loads(_i); sys.stdout.write(_o["IP"]);' | read e && echo $e
+# torsocks wget -qO- https://check.torproject.org/api/ip | python -c 'import sys; s=sys.stdin.read(); import json; sys.stdout.write(json.loads(s)["IP"]);' | read e && echo $e
+# curl -s "https://api.iplocation.net/?ip=$EXTIP"
+
+
+###
+# pyserver
+##
+alias pyserver='PORT=4000; echo -e "\nhttp://localhost:$PORT"; getIPofDefaultInterface IP; echo -e "http://$IP:$PORT\n"; /usr/bin/python3 -m http.server --bind $IP $PORT'
+
+###
+# php server
+##
+alias phpserver='PORT=8080; getIPofDefaultInterface IP && open http://$IP:$PORT && php -S $IP:$PORT'
+
+###
+# poetry
+##
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+
+alias firefox="/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox"
+
+# https://platform.openai.com/docs/quickstart?context=python
+source $HOME/.config/openai/ouilogique_key_1
+
+
+alias ucm='python3 /Users/nico/Public/nicotools/unicode_char_map/unicode_char_map.py'
+
+# Git completion
+# https://www.macinstruct.com/tutorials/how-to-enable-git-tab-autocomplete-on-your-mac/
+autoload -Uz compinit && compinit
+

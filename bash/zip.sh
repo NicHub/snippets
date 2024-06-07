@@ -18,3 +18,6 @@ zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
 
 DIRNAME=cv_njeanmon
 zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
+
+DIRNAME=nicolas_jeanmonod-2024-04-17-inscription-unia
+zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
