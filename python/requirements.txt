@@ -16,6 +16,7 @@ jupyter_client
 jupyter_core
 manim
 matplotlib
+metakernel
 numpy
 openai
 opencv-python
