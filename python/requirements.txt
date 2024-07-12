@@ -23,6 +23,7 @@ opencv-python
 pandas
 pendulum
 Pillow
+pillow-heif
 pint
 pyserial
 PyYAML
