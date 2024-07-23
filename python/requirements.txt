@@ -5,6 +5,7 @@
 # python3 -m pip list --outdated
 # python3 -m pip  install pipupgrade
 # python3 -m pipupgrade --verbose --latest --yes
+# find /opt/homebrew/lib/python3.11/site-packages -empty -type d -delete
 
 beautifulsoup4
 black
