@@ -1,3 +1,10 @@
+
+
+# Sur votre appareil Android, activez les options de développement en allant dans Paramètres > À propos du téléphone et en cliquant 7 fois sur le numéro de build.
+# Allez dans Paramètres > Options de développement et activez "Débogage USB".
+
+
+
 which adb
 man adb
 adb --help
@@ -12,6 +19,7 @@ README.mdrr20240529_105639.heic
 adb pull /storage/emulated/0/DCIM/Screenshots
 adb pull /storage/emulated/0/DCIM/Screenshots .
 adb pull /storage/emulated/0/DCIM/Camera .
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/
 adb shell am start -a android.media.action.IMAGE_CAPTURE
 adb shell am start -a android.media.action.IMAGE_CAPTURE
 adb shell "am start -a android.media.action.STILL_IMAGE_CAMERA"
@@ -115,3 +123,22 @@ adb logcat --help
 
 adb push /Users/nico/kdnicomac/divers/SDRTouchPresets.xml /storage/emulated/0/Documents/
 adb pull /storage/emulated/0/Documents/SDRTouchPresets.xml /Users/nico/kdnicomac/divers/
+
+
+# adb via Wifi
+
+# Connect the device to the computer via USB
+adb tcpip 5555
+adb shell ip address | grep 192.168 # + copy device IP
+# or
+adb shell ip route | awk '{print $9}' # + copy device IP
+# Unconnect USB
+adb connect 192.168.145.222:5555 # Use device IP
+adb devices
+adb shell
+
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/
+
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/ && adb shell rm -r /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo
+
+adb shell dumpsys battery

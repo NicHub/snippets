@@ -15,3 +15,5 @@ grep -rls --include="*.py" "import logging" "`pwd`"
 grep -rIls "SB00622A" "`pwd`"
 
 grep -riIls --include="*.ini" "d1" "`pwd`"
+
+grep -r --include="Info.plist" "x86_64" "/Applications"
