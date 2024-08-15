@@ -138,6 +138,7 @@ adb devices
 adb shell
 
 adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/
+adb pull /storage/emulated/0/DCIM/Camera/20240610_123613.heic /Users/nico/kdnicomac/images/Camera/Camera/2024/06/
 
 adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/ && adb shell rm -r /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo
 
