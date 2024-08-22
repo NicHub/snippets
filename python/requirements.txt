@@ -37,6 +37,7 @@ uncertainties
 watchdog
 yt-dlp
 
+adafruit-nrfutil
 # wolframclient
 
 # https://automatetheboringstuff.com/chapter18/
