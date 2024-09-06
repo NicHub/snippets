@@ -15,3 +15,8 @@ sudo find / -name torrc
 
 # /opt/homebrew/etc/tor/torrc
 
+###########
+# Sur Windows
+# notepad %HOMEPATH%\OneDrive\Bureau\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
+# dir C:\ /s /b | findstr /i "torrc"
+# cmd /k dir C:\ /s /b | findstr /i "torrc"

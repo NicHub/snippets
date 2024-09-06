@@ -143,3 +143,8 @@ adb pull /storage/emulated/0/DCIM/Camera/20240610_123613.heic /Users/nico/kdnico
 adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/ && adb shell rm -r /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo
 
 adb shell dumpsys battery
+
+adb pull /storage/emulated/0/DCIM/Camera/2024082* /Users/nico/Desktop/images
+
+adb shell 'ls /storage/emulated/0/DCIM/Camera/2024082*' | xargs -I {} adb pull {} ~/Desktop/images/
+adb shell 'ls /storage/emulated/0/DCIM/Camera/202408*' | xargs -I {} adb pull {} ~/Desktop/images/

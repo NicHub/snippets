@@ -10,6 +10,7 @@
 beautifulsoup4
 black
 bokeh
+fastapi_poe
 invoke
 ipykernel
 ipython
@@ -26,6 +27,7 @@ pendulum
 Pillow
 pillow-heif
 pint
+poe-api # https://poe.com/api_key
 pyserial
 PyYAML
 scipy
@@ -39,6 +41,8 @@ yt-dlp
 
 adafruit-nrfutil
 # wolframclient
+# nltk
+spacy
 
 # https://automatetheboringstuff.com/chapter18/
 # pyautogui
