@@ -19,7 +19,7 @@ README.mdrr20240529_105639.heic
 adb pull /storage/emulated/0/DCIM/Screenshots
 adb pull /storage/emulated/0/DCIM/Screenshots .
 adb pull /storage/emulated/0/DCIM/Camera .
-adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo ~/Desktop/ar/ip_webcam/
 adb shell am start -a android.media.action.IMAGE_CAPTURE
 adb shell am start -a android.media.action.IMAGE_CAPTURE
 adb shell "am start -a android.media.action.STILL_IMAGE_CAMERA"
@@ -121,30 +121,39 @@ adb logcat --help
 adb logcat --help
 #�adb logcat > adb_logcat.txt
 
-adb push /Users/nico/kdnicomac/divers/SDRTouchPresets.xml /storage/emulated/0/Documents/
-adb pull /storage/emulated/0/Documents/SDRTouchPresets.xml /Users/nico/kdnicomac/divers/
+adb push ~/kdnicomac/divers/SDRTouchPresets.xml /storage/emulated/0/Documents/
+adb pull /storage/emulated/0/Documents/SDRTouchPresets.xml ~/kdnicomac/divers/
 
 
 # adb via Wifi
 
 # Connect the device to the computer via USB
 adb tcpip 5555
-adb shell ip address | grep 192.168 # + copy device IP
+ip=$(adb shell ip route | awk '{print $9}' | awk '/192/') && echo "$ip" && echo "$ip" | pbcopy
 # or
 adb shell ip route | awk '{print $9}' # + copy device IP
+# or
+adb shell ip address | grep 192.168 # + copy device IP
 # Unconnect USB
-adb connect 192.168.145.222:5555 # Use device IP
+adb connect 192.168.175.67:5555 # Use device IP
 adb devices
 adb shell
 
-adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/
-adb pull /storage/emulated/0/DCIM/Camera/20240610_123613.heic /Users/nico/kdnicomac/images/Camera/Camera/2024/06/
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo ~/Desktop/ar/ip_webcam/
+adb pull /storage/emulated/0/DCIM/Camera/20240610_123613.heic ~/kdnicomac/images/Camera/Camera/2024/06/
 
-adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo /Users/nico/Desktop/ar/ip_webcam/ && adb shell rm -r /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo
+adb pull /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo ~/Desktop/ar/ip_webcam/ && adb shell rm -r /storage/emulated/0/DCIM/Camera/IP_WEBCAM/photo
 
 adb shell dumpsys battery
 
-adb pull /storage/emulated/0/DCIM/Camera/2024082* /Users/nico/Desktop/images
+adb pull /storage/emulated/0/DCIM/Camera/2024082* ~/Desktop/images
+adb pull /storage/emulated/0/DCIM/Camera/202409* ~/Desktop/images
 
 adb shell 'ls /storage/emulated/0/DCIM/Camera/2024082*' | xargs -I {} adb pull {} ~/Desktop/images/
-adb shell 'ls /storage/emulated/0/DCIM/Camera/202408*' | xargs -I {} adb pull {} ~/Desktop/images/
+adb shell 'ls /storage/emulated/0/DCIM/Camera/202409*' | xargs -I {} adb pull {} ~/Desktop/images/
+
+# List last image
+adb shell ls -t /storage/emulated/0/DCIM/Camera/ | head -n 1
+
+# Copy last image
+mkdir -p ~/Desktop/images && adb shell ls -t /storage/emulated/0/DCIM/Camera/ | head -n 1 | xargs -I {} adb pull /storage/emulated/0/DCIM/Camera/{} ~/Desktop/images
