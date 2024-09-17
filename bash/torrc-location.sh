@@ -2,7 +2,7 @@ sudo find / -name torrc
 
 # https://support.torproject.org/tbb/tbb-editing-torrc/
 
-# "$HOME/Library/Application Support/TorBrowser-Data/Tor/torrc"
+# code "$HOME/Library/Application Support/TorBrowser-Data/Tor/torrc"
 
 # /Users/nico/Library/Application Support/TorBrowser-Data/Tor/torrc
 # /System/Volumes/Data/Users/nico/Library/Application Support/TorBrowser-Data/Tor/torrc
