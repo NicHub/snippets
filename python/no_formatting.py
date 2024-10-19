@@ -16,6 +16,9 @@ no quality assurance => no linting
 ignore specific warning
 # noqa: F401
 
+ignore entire file
+# pylint: skip-file
+
 
 See:
 https://www.alpharithms.com/noqa-python-501210/
@@ -73,3 +76,15 @@ print("46 equals 2 = ", 46 == 2)
 %run demo.py arg1 arg2
 """;  # noqa: E703
 # fmt: on
+
+"""
+Avec Pylance
+"""
+x=5  # type: ignore[whitespace]
+x=5  # type: ignore
+
+"""
+Avec Mypy
+"""
+# (fichier entier)
+# mypy: ignore-errors

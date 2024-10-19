@@ -13,11 +13,14 @@ xattr -rc .
 
 # Change file permissions recursively
 # 666 = -rw-rw-rw-
-sudo find . -type f \( -path "./.git/*" -prune -o -exec chmod 666 {} \; \)
+# 644 = -rw-r--r-- => standard
+sudo find . -type f \( -path "./.git/*" -prune -o -exec chmod 644 {} \; \)
 
 # Change directory permissions recursively
 # 777 = drwxrwxrwx
-sudo find . -type d \( -path "./.git/*" -prune -o -exec chmod 777 {} \; \)
+# 755 = drwxr-xr-x => standard
+sudo find . -type d \( -path "./.git/*" -prune -o -exec chmod 755 {} \; \)
 
 # Change owner recursively
 sudo chown -R $USER .
+

@@ -17,3 +17,5 @@ grep -rIls "SB00622A" "`pwd`"
 grep -riIls --include="*.ini" "d1" "`pwd`"
 
 grep -r --include="Info.plist" "x86_64" "/Applications"
+
+grep -rIls --include="*.svg" "CDATA" "`pwd`"

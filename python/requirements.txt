@@ -10,39 +10,42 @@
 beautifulsoup4
 black
 bokeh
+# dotenv # fonctionne pas avec 3.13
 fastapi_poe
+geopy
 invoke
 ipykernel
 ipython
+ipywidgets
 jupyter_client
 jupyter_core
-manim
+# manim  # fonctionne pas avec 3.13
+# manim_texthelper
 matplotlib
 metakernel
 numpy
 openai
 opencv-python
 pandas
-pendulum
+# pendulum # fonctionne pas avec 3.13
 Pillow
 pillow-heif
 pint
-poe-api # https://poe.com/api_key
 pyserial
 PyYAML
 scipy
 setuptools
-streamlit
+# streamlit # fonctionne pas avec 3.13
 types-PyYAML
 types-requests
 uncertainties
 watchdog
 yt-dlp
 
-adafruit-nrfutil
+# adafruit-nrfutil # fonctionne pas avec 3.13
 # wolframclient
 # nltk
-spacy
+# spacy # fonctionne pas avec 3.13
 
 # https://automatetheboringstuff.com/chapter18/
 # pyautogui
@@ -104,4 +107,3 @@ spacy
 # urllib3==2.0.6
 # wcwidth==0.2.8
 # xyzservices==2023.10.0
-# (pythonenvnico11) -->
