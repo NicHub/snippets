@@ -1,13 +1,14 @@
 """
 Exit code → 0
-
-Using `import readline` removes ^C.
-The module readline is not avalaible on Windows.
 """
 
 try:
+    # Importing readline disables the display of ^C
+    # when the user stops the program with Ctrl+C.
+    # The module readline is not avalaible on Windows.
     import readline  # noqa: F401
 except ImportError:
+    print("module readline is not accessible")
     pass
 
 
