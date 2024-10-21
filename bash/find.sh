@@ -42,3 +42,6 @@ find "`pwd`" -type f -exec find {} \;
 
 # List all files that have extended attributes
 find "`pwd`" -exec ls -l {} + | grep @
+
+# List hidden files
+ls -a | grep '^\.'

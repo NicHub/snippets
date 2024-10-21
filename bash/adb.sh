@@ -159,3 +159,6 @@ adb shell ls -t /storage/emulated/0/DCIM/Camera/ | head -n 1
 mkdir -p ~/Desktop/images && adb shell ls -t /storage/emulated/0/DCIM/Camera/ | head -n 1 | xargs -I {} adb pull /storage/emulated/0/DCIM/Camera/{} ~/Desktop/images
 
 adb pull /storage/emulated/0/Documents/temp4426071845391382634.PDF ~/Desktop/
+
+
+adb push "/Users/nico/kdnicomac/musique/Eckhart Tolle/" /storage/emulated/0/Music

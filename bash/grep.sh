@@ -19,3 +19,10 @@ grep -riIls --include="*.ini" "d1" "`pwd`"
 grep -r --include="Info.plist" "x86_64" "/Applications"
 
 grep -rIls --include="*.svg" "CDATA" "`pwd`"
+
+grep -riIls --include="*.py" "serial" "`pwd`"
+
+grep -riIls --include="*.py" "less +F" "`pwd`"
+
+grep -rls --include="create-pio-project.sh" "bash" "`pwd`"
+
