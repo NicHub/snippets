@@ -35,6 +35,8 @@ find "`pwd`" -type f -name "*_conflict*" -exec md5sum {} >> ~/Desktop/kdrive_con
 
 find "`pwd`" -type f -name "*xerces*"
 
+find "`pwd`" -type f -name ".DS_Store" -exec rm {} \;;
+
 # Run another command at the end with all the results.
 find "`pwd`" -type f -exec find {} +
 # Run another command each time a result is returned.

@@ -26,3 +26,4 @@ grep -riIls --include="*.py" "less +F" "`pwd`"
 
 grep -rls --include="create-pio-project.sh" "bash" "`pwd`"
 
+grep -riIls --include="*.sh" "[@]" "`pwd`"
