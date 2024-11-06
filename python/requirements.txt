@@ -6,6 +6,7 @@
 # python3 -m pip  install pipupgrade
 # python3 -m pipupgrade --verbose --latest --yes
 # find /opt/homebrew/lib/python3.11/site-packages -empty -type d -delete
+# /opt/homebrew/bin/python3 -m pip install ipykernel -U --user --force-reinstall
 
 beautifulsoup4
 black
@@ -26,6 +27,7 @@ metakernel
 numpy
 openai
 opencv-python
+openpyxl
 pandas
 # pendulum # fonctionne pas avec 3.13
 Pillow
