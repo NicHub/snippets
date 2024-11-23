@@ -35,9 +35,10 @@ pillow-heif
 pint
 pyserial
 PyYAML
+requests
 scipy
 setuptools
-# streamlit # fonctionne pas avec 3.13
+streamlit
 # ttn-py-mqtt # ERROR: Could not find a version that satisfies the requirement ttn-py-mqtt (from versions: none)
 types-PyYAML
 types-requests

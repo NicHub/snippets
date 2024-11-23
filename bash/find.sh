@@ -47,3 +47,5 @@ find "`pwd`" -exec ls -l {} + | grep @
 
 # List hidden files
 ls -a | grep '^\.'
+
+sudo find / -type f -name "avrdude"

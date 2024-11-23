@@ -61,6 +61,7 @@ print(tdelta)
 
 # TIME
 localtime = time.localtime()
+nowutc = time.gmtime()
 
 print("\n# strftime WITH time")
 print(time.strftime("%Y-%m-%d_%H-%M-%S", localtime))
