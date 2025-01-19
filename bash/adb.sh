@@ -149,7 +149,7 @@ adb shell dumpsys battery
 adb pull /storage/emulated/0/DCIM/Camera/2024082* ~/Desktop/images
 adb pull /storage/emulated/0/DCIM/Camera/202409* ~/Desktop/images
 
-adb shell 'ls /storage/emulated/0/DCIM/Camera/2024082*' | xargs -I {} adb pull {} ~/Desktop/images/
+adb shell 'ls /storage/emulated/0/DCIM/Camera/20241221*' | xargs -I {} adb pull {} ~/Desktop/images/
 adb shell 'ls /storage/emulated/0/DCIM/Camera/202409*' | xargs -I {} adb pull {} ~/Desktop/images/
 
 # List last image

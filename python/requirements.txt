@@ -48,6 +48,7 @@ streamlit
 types-PyYAML
 types-requests
 uncertainties
+Unidecode
 watchdog
 yt-dlp
 
