@@ -49,3 +49,4 @@ find "`pwd`" -exec ls -l {} + | grep @
 ls -a | grep '^\.'
 
 sudo find / -type f -name "avrdude"
+sudo find "`pwd`" -type f -name "M5Atom.h"
