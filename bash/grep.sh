@@ -28,4 +28,8 @@ grep -rls --include="create-pio-project.sh" "bash" "`pwd`"
 
 grep -riIls --include="*.sh" "[@]" "`pwd`"
 
-grep -rils --include="*.ino" "heart"  ~/Documents/Arduino/libraries
+grep -rils --include="*.ino" --include="*.c*" --include="*.h*" "SCD41"  ~/Documents/Arduino/libraries
+grep -rils --include="*src/*.cpp" "M5UnitENV.h"  ~/kdnicomac/boulot/2024-11-11-mandat-international/innospace-demo-iot-stuff
+
+grep -rls --include="README.md" "thethingsnetwork" "`pwd`"
+grep -rIls "/System/Cryptexes/App/usr/bin" "`pwd`"

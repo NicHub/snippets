@@ -50,3 +50,10 @@ ls -a | grep '^\.'
 
 sudo find / -type f -name "avrdude"
 sudo find "`pwd`" -type f -name "M5Atom.h"
+
+sudo find / -type f -name "avrdude"
+
+ls -R ~/Documents/Arduino/libraries | grep -i "core"
+time ls -R ~ | grep -i "MAX30100"
+ls -d -1 -R ~/Documents/Arduino/libraries | grep -i "core"
+ls -d -1 -R . | grep -i "atom"
