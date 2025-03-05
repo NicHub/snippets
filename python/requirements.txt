@@ -24,11 +24,13 @@ ipython
 ipywidgets
 jupyter_client
 jupyter_core
+lxml
 # manim  # fonctionne pas avec 3.13
 # manim_texthelper
 matplotlib
 metakernel
 numpy
+odfpy
 openai
 opencv-python
 openpyxl
