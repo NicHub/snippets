@@ -33,3 +33,7 @@ grep -rils --include="*src/*.cpp" "M5UnitENV.h"  ~/kdnicomac/boulot/2024-11-11-m
 
 grep -rls --include="README.md" "thethingsnetwork" "`pwd`"
 grep -rIls "/System/Cryptexes/App/usr/bin" "`pwd`"
+
+grep -rls --include="*.cpp" --include="*.ino" "sx12" "`pwd`"
+
+grep -rls --include="*.cpp" --include="*.ino" "Rolf" "`pwd`"

@@ -16,6 +16,7 @@ beautifulsoup4
 black
 bokeh
 # dotenv # fonctionne pas avec 3.13
+edgeimpulse
 fastapi_poe
 geopy
 invoke
@@ -28,6 +29,7 @@ lxml
 # manim  # fonctionne pas avec 3.13
 # manim_texthelper
 matplotlib
+meshtastic
 metakernel
 numpy
 odfpy
@@ -41,6 +43,7 @@ Pillow
 pillow-heif
 pint
 pyserial
+pytap2
 PyYAML
 requests
 scipy

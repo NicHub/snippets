@@ -57,3 +57,5 @@ ls -R ~/Documents/Arduino/libraries | grep -i "core"
 time ls -R ~ | grep -i "MAX30100"
 ls -d -1 -R ~/Documents/Arduino/libraries | grep -i "core"
 ls -d -1 -R . | grep -i "atom"
+
+sudo find / -type f -name "koshi-player.html"

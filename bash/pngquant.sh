@@ -1,5 +1,20 @@
 ###
 #
+# options:
+#   --force           overwrite existing output files (synonym: -f)
+#   --skip-if-larger  only save converted files if they're smaller than original
+#   --output file     destination file path to use instead of --ext (synonym: -o)
+#   --ext new.png     set custom suffix/extension for output filenames
+#   --quality min-max don't save below min, use fewer colors below max (0-100)
+#   --speed N         speed/quality trade-off. 1=slow, 4=default, 11=fast & rough
+#   --nofs            disable Floyd-Steinberg dithering
+#   --posterize N     output lower-precision color (e.g. for ARGB4444 output)
+#   --strip           remove optional metadata (default on Mac)
+#   --verbose         print status messages (synonym: -v)
+#
+# usage:  pngquant [options] [ncolors] -- pngfile [pngfile ...]
+#         pngquant [options] [ncolors] - >stdout <stdin
+#
 ##
 
 shopt -s nullglob
@@ -14,8 +29,8 @@ for file_name in "${FILE_NAMES[@]}"; do
         --verbose                     \
         --force                       \
         --skip-if-larger              \
-        --quality 0-2                 \
-        4                             \
+        --quality 0-100               \
+        256                           \
         --output "$file_name-out.png" \
         "$file_name"
 done
