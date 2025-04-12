@@ -15,7 +15,7 @@ tqdm-stubs
 beautifulsoup4
 black
 bokeh
-# dotenv # fonctionne pas avec 3.13
+dotenv
 edgeimpulse
 fastapi_poe
 geopy
@@ -26,11 +26,13 @@ ipywidgets
 jupyter_client
 jupyter_core
 lxml
-# manim  # fonctionne pas avec 3.13
-# manim_texthelper
+manim
+# manim_texthelper # fonctionne pas avec 3.13
 matplotlib
 meshtastic
 metakernel
+netifaces
+types-netifaces
 numpy
 odfpy
 openai
@@ -57,7 +59,7 @@ Unidecode
 watchdog
 yt-dlp
 
-# adafruit-nrfutil # fonctionne pas avec 3.13
+# adafruit-nrfutil
 # wolframclient
 # nltk
 # spacy # fonctionne pas avec 3.13

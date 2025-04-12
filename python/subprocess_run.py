@@ -32,7 +32,7 @@ def run_1():
     # This way of using subprocess.run is blocking.
     print("\n# 1")
     ans = subprocess.run(
-        args=CMD, shell=True, capture_output=True, check=False, encoding="utf-8"
+        args=CMD, shell=True, capture_output=True, check=True, encoding="utf-8"
     )
     pprint(ans)
     if ans.returncode != 0:
