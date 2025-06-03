@@ -59,3 +59,7 @@ ls -d -1 -R ~/Documents/Arduino/libraries | grep -i "core"
 ls -d -1 -R . | grep -i "atom"
 
 sudo find / -type f -name "koshi-player.html"
+
+sudo find / -type f -name "pins_arduino.h"
+
+sudo find / -type d -iname "hall"
