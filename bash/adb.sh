@@ -162,3 +162,5 @@ adb pull /storage/emulated/0/Documents/temp4426071845391382634.PDF ~/Desktop/
 
 
 adb push "/Users/nico/kdnicomac/musique/Eckhart Tolle/" /storage/emulated/0/Music
+
+adb push jung-un-voyage-vers-soi-frederic-lenoir.webm /storage/emulated/0/Music/podcasts

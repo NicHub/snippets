@@ -30,7 +30,7 @@ for file_name in "${FILE_NAMES[@]}"; do
         --force                       \
         --skip-if-larger              \
         --quality 0-100               \
-        256                           \
+        10                           \
         --output "$file_name-out.png" \
         "$file_name"
 done

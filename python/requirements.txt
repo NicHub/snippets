@@ -1,4 +1,4 @@
-# python3 -m pip install --upgrade pip && python3 -m pip install --upgrade -r requirements.txt
+# cd python ; python3 -m pip install --upgrade pip && python3 -m pip install --upgrade -r requirements.txt
 # See: https://learnpython.com/blog/python-requirements-file/
 # python3 -m pip freeze
 # python3 -m pip list --outdated
@@ -14,7 +14,9 @@ tqdm
 tqdm-stubs
 beautifulsoup4
 black
+bleak
 bokeh
+dash_bootstrap_components # for meshtastic
 dotenv
 edgeimpulse
 fastapi_poe
@@ -31,6 +33,7 @@ manim
 matplotlib
 meshtastic
 metakernel
+mqttwarn
 netifaces
 types-netifaces
 numpy
@@ -40,10 +43,13 @@ opencv-python
 openpyxl
 pandas
 pandas-stubs
+parse # for meshtastic
 # pendulum # fonctionne pas avec 3.13
 Pillow
 pillow-heif
 pint
+ppk2_api  # for meshtastic
+pygame
 pyserial
 pytap2
 PyYAML
