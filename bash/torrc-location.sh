@@ -17,6 +17,25 @@ sudo find / -name torrc
 
 ###########
 # Sur Windows
-# notepad %HOMEPATH%\OneDrive\Bureau\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
+# fonctionne plus => notepad %HOMEPATH%\OneDrive\Bureau\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
 # dir C:\ /s /b | findstr /i "torrc"
 # cmd /k dir C:\ /s /b | findstr /i "torrc"
+# "C:\Program Files (x86)\Tor Browser\Browser\TorBrowser\Data\Tor\torrc"
+# https://mylocation.org/
+
+# Exemple de torrc pour Windows
+
+# torrc-defaults for Tor Browser
+#
+# If non-zero, try to write to disk less frequently than we would otherwise.
+AvoidDiskWrites 1
+# Where to send logging messages.  Format is minSeverity[-maxSeverity]
+# (stderr|stdout|syslog|file FILENAME).
+Log notice stdout
+CookieAuthentication 1
+DormantCanceledByStartup 1
+ClientTransportPlugin meek_lite,obfs2,obfs3,obfs4,scramblesuit exec TorBrowser\Tor\PluggableTransports\lyrebird.exe
+ClientTransportPlugin snowflake exec TorBrowser\Tor\PluggableTransports\snowflake-client.exe
+ClientTransportPlugin webtunnel exec TorBrowser\Tor\PluggableTransports\webtunnel-client.exe
+ClientTransportPlugin conjure exec TorBrowser\Tor\PluggableTransports\conjure-client.exe -registerURL https://registration.refraction.network/api
+ExitNodes {ca} StrictNodes 1
