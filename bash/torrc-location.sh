@@ -17,10 +17,9 @@ sudo find / -name torrc
 
 ###########
 # Sur Windows
-# fonctionne plus => notepad %HOMEPATH%\OneDrive\Bureau\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
+# notepad %HOMEPATH%\Desktop\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
 # dir C:\ /s /b | findstr /i "torrc"
 # cmd /k dir C:\ /s /b | findstr /i "torrc"
-# "C:\Program Files (x86)\Tor Browser\Browser\TorBrowser\Data\Tor\torrc"
 # https://mylocation.org/
 
 # Exemple de torrc pour Windows
