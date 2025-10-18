@@ -37,3 +37,5 @@ grep -rIls "/System/Cryptexes/App/usr/bin" "`pwd`"
 grep -rls --include="*.cpp" --include="*.ino" "sx12" "`pwd`"
 
 grep -rls --include="*.cpp" --include="*.ino" "Rolf" "`pwd`"
+
+grep -rls --include="*.py" "serial" "`pwd`"
