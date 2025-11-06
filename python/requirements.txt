@@ -1,4 +1,7 @@
 # cd python ; python3 -m pip install --upgrade pip && python3 -m pip install --upgrade -r requirements.txt
+#
+# deactivate && source ~/pyve12/bin/activate
+#
 # See: https://learnpython.com/blog/python-requirements-file/
 # python3 -m pip freeze
 # python3 -m pip list --outdated
@@ -70,7 +73,9 @@ types-requests
 uncertainties
 Unidecode
 watchdog
-yt-dlp
+# yt-dlp
+yt-dlp[default]
+yt-dlp[pycryptodomex]
 
 # adafruit-nrfutil
 # wolframclient
