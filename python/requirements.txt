@@ -44,6 +44,8 @@ types-netifaces
 numpy
 odfpy
 openai
+openai-whisper
+faster-whisper
 opencv-python
 openpyxl
 pandas
