@@ -26,7 +26,7 @@ yt-dlp --write-auto-sub --skip-download --sub-lang en --sub-format json3 "${URL}
 
 
 # Download best version
-yt-dlp -f "bestvideo+bestaudio/best" $URL
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
 
 
 FNAME=coca.mp4
