@@ -38,6 +38,7 @@ meshtastic
 metakernel
 mqttwarn
 netifaces
+premailer
 quarto-cli
 qrcode[pil]
 types-netifaces
