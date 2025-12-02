@@ -7,7 +7,7 @@ https://docs.python.org/fr/3/library/subprocess.html
 """
 
 import subprocess
-from pprint import pprint
+from rich import print
 
 
 CMD = "sleep 1" "&& thiscommanddoesnotexist"
@@ -27,14 +27,14 @@ def run_1():
     # With check=False, errors are not reported to Python as such. Check if
     # ans.returncode == 0 to know if the command was successful.
     #
-    # If encoding is not set, errors are reterned as bytes.
+    # If encoding is not set, errors are returned as bytes.
     #
     # This way of using subprocess.run is blocking.
     print("\n# 1")
     ans = subprocess.run(
         args=CMD, shell=True, capture_output=True, check=True, encoding="utf-8"
     )
-    pprint(ans)
+    print(ans)
     if ans.returncode != 0:
         print(ans.stderr.strip())
         print(ans.returncode)
@@ -57,7 +57,7 @@ def run_2():
     except subprocess.TimeoutExpired as _e:
         print(_e)
     else:
-        pprint(ans)
+        print(ans)
         if ans.returncode != 0:
             print(ans.stderr.strip())
             print(ans.returncode)
@@ -78,7 +78,7 @@ if __name__ == "__main__":
         # Obtient la liste de tous les processus
         processes = psutil.process_iter()
         # for processe in processes:
-        #     pprint(processe)
+        #     print(processe)
 
         # Filtre les processus pour n'afficher que les terminaux
         terminals = [p.name() for p in processes if "console" in p.name().lower()]
