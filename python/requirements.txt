@@ -1,4 +1,4 @@
-# cd python ; python3 -m pip install --upgrade pip && python3 -m pip install --upgrade -r requirements.txt
+# [ -d python ] && cd python ; python3 -m pip install --upgrade pip && python3 -m pip install --upgrade -r requirements.txt
 #
 # deactivate && source ~/pyve12/bin/activate
 #
@@ -10,11 +10,6 @@
 # find /opt/homebrew/lib/python3.11/site-packages -empty -type d -delete
 # /opt/homebrew/bin/python3 -m pip install ipykernel -U --user --force-reinstall
 
-pyperclip
-pyperclip-stubs
-rich
-tqdm
-tqdm-stubs
 beautifulsoup4
 black
 bleak
@@ -23,6 +18,7 @@ dash_bootstrap_components # for meshtastic
 dotenv
 edgeimpulse
 fastapi_poe
+faster-whisper; python_version < '3.14'
 geopy
 invoke
 ipykernel
@@ -31,117 +27,52 @@ ipywidgets
 jupyter_client
 jupyter_core
 lxml
-manim
-# manim_texthelper # fonctionne pas avec 3.13
+manim_texthelper; python_version == 'False'
+manim; python_version == '3.13' # fonctionne pas avec 3.14 à cause de av et ffmpeg (https://chatgpt.com/share/69315c4a-14bc-800c-be50-3f785297bfa9)
 matplotlib
 meshtastic
 metakernel
 mqttwarn
-netifaces
-premailer
-quarto-cli
-qrcode[pil]
-types-netifaces
+netifaces # Installer aussi types-netifaces
 numpy
 odfpy
 openai
-openai-whisper
-faster-whisper
+openai-whisper; python_version < '3.14'
 opencv-python
 openpyxl
 pandas
 pandas-stubs
 parse # for meshtastic
-# pendulum # fonctionne pas avec 3.13
+pendulum
 Pillow
 pillow-heif
 pint
 polars
-ppk2_api  # for meshtastic
+ppk2_api # for meshtastic
+premailer
 pygame
-pyserial
-textual
-types-pyserial
+pyperclip
+pyperclip-stubs
+pyserial # Installer aussi types-pyserial
 pytap2
-PyYAML
-requests
+PyYAML # Installer aussi types-PyYAML
+qrcode[pil]
+quarto-cli
+requests # Installer aussi types-requests
+rich
 scapy
 scipy
 setuptools
 streamlit
-# tensorflow # Python 3.12 max
-# ttn-py-mqtt # ERROR: Could not find a version that satisfies the requirement ttn-py-mqtt (from versions: none)
-types-PyYAML
-types-requests
+textual
+tqdm
+tqdm-stubs
+types-netifaces # En plus de netifaces
+types-pyserial # En plus de pyserial
+types-PyYAML # En plus de PyYAML
+types-requests # En plus de requests
 uncertainties
 Unidecode
 watchdog
-# yt-dlp
-yt-dlp[default]
-yt-dlp[pycryptodomex]
-
-# adafruit-nrfutil
-# wolframclient
-# nltk
-# spacy # fonctionne pas avec 3.13
-
-# https://automatetheboringstuff.com/chapter18/
-# pyautogui
-# pyobjc-framework-Quartz
-# pyobjc-core
-# pyobjc
-
-# qrcode
-# weasyprint
-# bokeh
-# Jinja2
-# kiwisolver==1.4.5
-# lazy_loader==0.3
-# librosa==0.10.1
-# llvmlite==0.41.0
-# Mako==1.2.4
-# MarkupSafe==2.1.3
-# matplotlib==3.8.0
-# matplotlib-inline==0.1.6
-# memory-profiler==0.61.0
-# msgpack==1.0.7
-# nest-asyncio==1.5.8
-# numba==0.58.0
-# numpy==1.25.2
-# packaging==23.2
-# pandas==2.1.1
-# parso==0.8.3
-# pexpect==4.8.0
-# pickleshare==0.7.5
-# Pillow==10.0.1
-# platformdirs==3.11.0
-# pooch==1.7.0
-# prompt-toolkit==3.0.39
-# psutil==5.9.5
-# ptyprocess==0.7.0
-# pure-eval==0.2.2
-# py4j==0.10.9.7
-# pyarrow==13.0.0
-# pycparser==2.21
-# Pygments==2.16.1
-# pyparsing==3.1.1
-# pyspark==3.5.0
-# python-dateutil==2.8.2
-# pytz==2023.3.post1
-# PyYAML==6.0.1
-# pyzmq==25.1.1
-# requests==2.31.0
-# scikit-learn==1.3.1
-# scipy==1.11.3
-# six==1.16.0
-# soundfile==0.12.1
-# soxr==0.3.7
-# stack-data==0.6.3
-# threadpoolctl==3.2.0
-# tornado==6.3.3
-# traitlets==5.11.2
-# typing_extensions==4.8.0
-# tzdata==2023.3
-# urllib3==2.0.6
-# wcwidth==0.2.8
-# xyzservices==2023.10.0
+wolframclient
+yt-dlp[default] # default => avec les dépendances optionnelles.
