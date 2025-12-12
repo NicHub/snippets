@@ -51,6 +51,7 @@ polars
 ppk2_api # for meshtastic
 premailer
 pygame
+PyGithub
 pyperclip
 pyperclip-stubs
 pyserial # Installer aussi types-pyserial
