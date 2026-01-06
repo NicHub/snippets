@@ -20,6 +20,7 @@ edgeimpulse
 fastapi_poe
 faster-whisper; python_version < '3.14'
 geopy
+gradio
 invoke
 ipykernel
 ipython
@@ -67,6 +68,7 @@ scipy
 setuptools
 streamlit
 textual
+textual-serve
 tqdm
 tqdm-stubs
 types-netifaces # En plus de netifaces
