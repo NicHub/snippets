@@ -3,17 +3,13 @@
 # Sur votre appareil Android, activez les options de développement en allant dans Paramètres > À propos du téléphone et en cliquant 7 fois sur le numéro de build.
 # Allez dans Paramètres > Options de développement et activez "Débogage USB".
 
-
+brew install android-platform-tools
 
 which adb
 man adb
 adb --help
 adb --help | less
 adb devices
-adb devices
-adb shell
-adb shell
-adb shell
 adb shell
 README.mdrr20240529_105639.heic
 adb pull /storage/emulated/0/DCIM/Screenshots
