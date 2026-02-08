@@ -61,7 +61,7 @@ pytap2
 python-Levenshtein
 PyYAML # Installer aussi types-PyYAML
 qrcode[pil]
-quarto-cli
+# quarto-cli # ChatGPT dit que quarto-cli est inutile
 requests # Installer aussi types-requests
 rich
 scapy
