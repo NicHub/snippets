@@ -30,6 +30,7 @@ jupyter_core
 lxml
 manim_texthelper; python_version == 'False'
 manim; python_version == '3.13' # fonctionne pas avec 3.14 à cause de av et ffmpeg (https://chatgpt.com/share/69315c4a-14bc-800c-be50-3f785297bfa9)
+markdown-link-extractor
 matplotlib
 meshtastic
 metakernel
