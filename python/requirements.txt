@@ -25,6 +25,7 @@ invoke
 ipykernel
 ipython
 ipywidgets
+jupyter
 jupyter_client
 jupyter_core
 lxml
@@ -80,4 +81,5 @@ uncertainties
 Unidecode
 watchdog
 wolframclient
-yt-dlp[default] # default => avec les dépendances optionnelles.
+# yt-dlp[default] # default => avec les dépendances optionnelles.
+yt-dlp
