@@ -20,3 +20,23 @@ document.head
     .appendChild(document.createElement("style"))
     .sheet.insertRule(`@page { size: 21cm ${heightMultiplier * 29.7}cm; }`, 0);
 window.print();
+
+/*
+
+Page qui bloque ce script
+https://prestations.vd.ch/pub/101660/PMDDE1-FLM88R/recapitulatif-taxation?transmitting=true&scrollTo=checkAndTransmit
+
+*/
+/*
+heightMultiplier = 5;
+document.head
+    .appendChild(document.createElement("style"))
+    .sheet.insertRule(`@page { size: 21cm ${heightMultiplier * 29.7}cm; }`, 0);
+window.print();
+
+VM156:3 Applying inline style violates the following Content Security Policy directive 'style-src 'self' 'nonce-3HeFb9RWr/ZbB5nJpvo2wOMlWijvsRAgH8EkJhnrbGqrMYpzZQEOrS90wJXuUWPmbUQNwLIbtspYbGsNYAjHqxLYga9LtkO9bbLgYFOk6lgS0A8B1ew+q50HDfl6/pWhPvpOpnojIF4Q2X3DYWP1UhoN+JD08jv38FB5ezK2ICc=''. Either the 'unsafe-inline' keyword, a hash ('sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.
+(anonymous) @ VM156:3
+VM156:4 Uncaught TypeError: Cannot read properties of null (reading 'insertRule')
+    at <anonymous>:4:11
+(anonymous) @ VM156:4
+*/
