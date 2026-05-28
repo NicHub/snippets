@@ -46,3 +46,12 @@ ffmpeg -i "${FNAME}" -vn -acodec copy "${FNAME%.mp4}.m4a"
 URL=https://www.youtube.com/watch?v=T2k4P_hgWyk
 yt-dlp --list-subs "${URL}"
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
+
+# Things That Cost Thousands They Never Told You Were Free Online
+URL=https://www.youtube.com/watch?v=qTjwhTjNibI
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format  ttml "${URL}"
+
+# BHL. Chronique d'un IMPOSTEUR au service de QUI ? 👉 🤫
+URL=https://www.youtube.com/watch?v=pa9zB5KLvNs
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
