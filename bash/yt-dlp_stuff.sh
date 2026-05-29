@@ -55,3 +55,11 @@ yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format  ttml "$
 # BHL. Chronique d'un IMPOSTEUR au service de QUI ? 👉 🤫
 URL=https://www.youtube.com/watch?v=pa9zB5KLvNs
 yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+
+# AKIM OMIRI : Liberté d'expression et fausse propagande
+URL=https://www.youtube.com/watch?v=egoW4SP7Ocw
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+
+# Séquence entière - Intrusion à la Riposte
+URL=https://www.youtube.com/watch?v=5ebJPkGLqZQ
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
