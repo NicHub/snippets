@@ -63,3 +63,18 @@ yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
 # Séquence entière - Intrusion à la Riposte
 URL=https://www.youtube.com/watch?v=5ebJPkGLqZQ
 yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+
+# Tolkien explains why the Fellowship didn't fly the Eagles to Mordor
+# Tolkien explains why the Fellowship didn't fly the Eagles to Mordor
+URL=https://www.youtube.com/watch?v=1-Uz0LMbWpI
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+yt-dlp --list-subs "${URL}"
+# yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format  ttml "${URL}"
+
+# [youtube] Extracting URL: https://www.youtube.com/watch?v=1-Uz0LMbWpI
+# [youtube] 1-Uz0LMbWpI: Downloading webpage
+# WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one
+# [youtube] 1-Uz0LMbWpI: Downloading android vr player API JSON
+# 1-Uz0LMbWpI has no automatic captions
+# 1-Uz0LMbWpI has no subtitles
+# open https://github.com/yt-dlp/yt-dlp/wiki/EJS
