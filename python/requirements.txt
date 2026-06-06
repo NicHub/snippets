@@ -17,6 +17,7 @@ bokeh
 curl_cffi # impersonation pour yt-dlp, voir aussi https://github.com/lexiforest/curl_cffi et https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#impersonation
 dash_bootstrap_components # for meshtastic
 dotenv
+duckdb
 edgeimpulse
 fastapi_poe
 faster-whisper; python_version < '3.14'
