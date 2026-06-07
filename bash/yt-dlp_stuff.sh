@@ -78,3 +78,9 @@ yt-dlp --list-subs "${URL}"
 # 1-Uz0LMbWpI has no automatic captions
 # 1-Uz0LMbWpI has no subtitles
 # open https://github.com/yt-dlp/yt-dlp/wiki/EJS
+
+# ZAWA TALK — Le coup de pression de Macron à Bally Bagayoko
+URL=https://www.youtube.com/watch?v=rCFZhmx9sjQ
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
