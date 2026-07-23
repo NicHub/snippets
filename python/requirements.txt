@@ -23,6 +23,7 @@ fastapi_poe
 faster-whisper; python_version < '3.14'
 geopy
 gradio
+graphifyy
 invoke
 ipykernel
 ipython
