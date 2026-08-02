@@ -84,3 +84,14 @@ URL=https://www.youtube.com/watch?v=rCFZhmx9sjQ
 yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
 yt-dlp --list-subs "${URL}"
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
+
+# Ce que 1 an à laisser l'IA coder m'a appris sur le métier de développeur
+URL=https://www.youtube.com/watch?v=7qlk9MQgafU
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
+
+# Technology Connections — Ceiling fans: the simple idea we keep screwing up
+ID=_KWdCqpXB7A
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
