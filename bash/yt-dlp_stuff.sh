@@ -95,3 +95,10 @@ ID=_KWdCqpXB7A
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --list-subs "${URL}"
 yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# The Speed of Light Was NEVER About Light. Here's Why!
+# Animated Physics et 2 autre(s)
+ID=FBaZQtKaHs0
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"

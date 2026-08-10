@@ -14,7 +14,7 @@ beautifulsoup4
 black
 bleak
 bokeh
-curl_cffi # impersonation pour yt-dlp, voir aussi https://github.com/lexiforest/curl_cffi et https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#impersonation
+# curl_cffi # Ne plus installer directement, mais avec yt-dlp[curl-cffi]. Impersonation pour yt-dlp, voir aussi https://github.com/lexiforest/curl_cffi et https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#impersonation
 dash_bootstrap_components # for meshtastic
 dotenv
 duckdb
@@ -88,4 +88,7 @@ Unidecode
 watchdog
 wolframclient
 # yt-dlp[default] # default => avec les dépendances optionnelles.
-yt-dlp
+# yt-dlp[default,curl-cffi]
+# yt-dlp
+yt-dlp[curl-cffi] # # Sans l’extra default : il exige urllib3>=2, incompatible avec edgeimpulse-api qui exige urllib3 < 2.
+yt-dlp-ejs
