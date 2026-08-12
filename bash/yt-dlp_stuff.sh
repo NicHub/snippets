@@ -90,6 +90,11 @@ URL=https://www.youtube.com/watch?v=7qlk9MQgafU
 yt-dlp --list-subs "${URL}"
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
 
+# Ces FÉCULENTS "Sains" te Font Grossir (la Vérité)
+ID=JiUjfD561WE
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format  ttml "${URL}"
+
 # Technology Connections — Ceiling fans: the simple idea we keep screwing up
 ID=_KWdCqpXB7A
 URL=https://www.youtube.com/watch?v=${ID}
@@ -102,3 +107,10 @@ ID=FBaZQtKaHs0
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --list-subs "${URL}"
 yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# formats / best formats
+URL=https://www.youtube.com/watch?v=tPEE9ZwTmy0  # Shortest Video on Youtube
+yt-dlp --list-formats "${URL}"
+yt-dlp -f 135 "${URL}"
+yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
+
