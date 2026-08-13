@@ -2,7 +2,7 @@
 
 ## Prevent a Mac laptop from turning on when opening its lid or connecting to power
 
-- <https://support.apple.com/en-us/120622>
+-   <https://support.apple.com/en-us/120622>
 
 ```bash
 sudo nvram BootPreference=%00
@@ -10,12 +10,18 @@ sudo nvram BootPreference=%00
 
 ## markdownlint
 
-- DavidAnson.vscode-markdownlint
-- <https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>
-- <https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md030.md>
+-   DavidAnson.vscode-markdownlint
+-   <https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>
+-   <https://github.com/DavidAnson/markdownlint/blob/v0.40.0/doc/md030.md>
 
-les exceptions sont dans ~/.markdownlint.json
+les exceptions sont dans $HOME/.markdownlint.json
+
+"$HOME/Library/Application Support/Code/User/settings.json"
 
 ```bash
-ln -s /Users/nico/Public/snippets/config/.markdownlint.json ~/.markdownlint.json
+ln -s $HOME/Public/snippets/config/.markdownlint.json $HOME/.markdownlint.json
 ```
+
+## doc de markdownlint
+
+https://github.com/DavidAnson/markdownlint/blob/v0.41.1/doc/md013.md

@@ -114,3 +114,7 @@ yt-dlp --list-formats "${URL}"
 yt-dlp -f 135 "${URL}"
 yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
 
+# https://ostechnix.com/yt-dlp-tutorial/
+# To download a video along with its accompanying details, including description, metadata, annotations, subtitles, and thumbnail, use the following command:
+# With this command, you can capture not only the video itself but also all the associated elements that enhance your viewing experience.
+yt-dlp --write-description --write-info-json --write-annotations --write-sub --write-thumbnail "${URL}"
