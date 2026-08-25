@@ -33,6 +33,7 @@ ln -s $HOME/Public/snippets/config/.markdownlint.json $HOME/.markdownlint.json
 MDNAME="$HOME/kdnicomac/kdnicomac/sites/cnl-naturopathie/site-web-v4/AGENTS.md"
 MDNAME="$HOME/.codex/AGENTS.md"
 MDNAME="$HOME/kdnicomac/kdnicomac/sites/cnl-naturopathie/site-web-v4/content/faq/index.md"
+MDNAME="$HOME/kdnicomac/kdnicomac/sites/hypnodingues.org/content/posts/2026/2026-04-10-les-dangers-des-ia/index.md"
 code $MDNAME
 prettier --write "$MDNAME"
 markdownlint-cli2 --config "$HOME/.markdownlint.json" --fix "$MDNAME"
