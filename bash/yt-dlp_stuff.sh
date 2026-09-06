@@ -118,3 +118,8 @@ yt-dlp -f "bestvideo+bestaudio/best" "${URL}"
 # To download a video along with its accompanying details, including description, metadata, annotations, subtitles, and thumbnail, use the following command:
 # With this command, you can capture not only the video itself but also all the associated elements that enhance your viewing experience.
 yt-dlp --write-description --write-info-json --write-annotations --write-sub --write-thumbnail "${URL}"
+
+# Jean Rivière -  IA et BUSINESS EN LIGNE : le grand débat
+ID=9IzDDRYNv2M
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
