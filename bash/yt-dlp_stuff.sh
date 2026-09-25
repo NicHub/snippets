@@ -128,3 +128,8 @@ yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --o
 ID=R66fhcoBdXs
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# 🥬 La vraie salade César : le secret est dans la sauce
+ID=ou8kyXnrvyQ
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
