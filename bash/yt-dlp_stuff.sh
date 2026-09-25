@@ -123,3 +123,8 @@ yt-dlp --write-description --write-info-json --write-annotations --write-sub --w
 ID=9IzDDRYNv2M
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# L’IA MENACE DÉJÀ LE TRAVAIL ET LES DIPLÔMES : vers une « génération perdue » ? - Axelle Arquié
+ID=R66fhcoBdXs
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
