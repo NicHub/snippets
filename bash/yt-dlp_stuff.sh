@@ -138,3 +138,8 @@ yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --o
 ID=SQ29P22mjfk
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+#  NEO - A Writing Tool for Authors
+ID=_K-ExOiEv40
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
