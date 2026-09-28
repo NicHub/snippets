@@ -143,3 +143,8 @@ yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --o
 ID=_K-ExOiEv40
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# Thélyson Orélien a utilisé l'IA ? Tous les tests et la réponse définitive !
+ID=9iiGaHCJTT4
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
