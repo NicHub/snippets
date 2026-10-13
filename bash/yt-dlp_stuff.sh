@@ -148,3 +148,8 @@ yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --o
 ID=9iiGaHCJTT4
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+#  The Apollo 11 Code Is Open Source (and it's hilarious)
+ID=ACAd_w3D-io
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
