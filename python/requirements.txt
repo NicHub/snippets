@@ -85,6 +85,7 @@ types-PyYAML # En plus de PyYAML
 types-requests # En plus de requests
 uncertainties
 Unidecode
+visidata
 watchdog
 wolframclient
 # yt-dlp[default] # default => avec les dépendances optionnelles.

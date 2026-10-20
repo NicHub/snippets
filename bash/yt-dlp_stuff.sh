@@ -149,7 +149,12 @@ ID=9iiGaHCJTT4
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
 
-#  The Apollo 11 Code Is Open Source (and it's hilarious)
+# The Apollo 11 Code Is Open Source (and it's hilarious)
 ID=ACAd_w3D-io
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# Ma réaction au burn out de Linguisticae
+ID=_b7TAVtu3hg
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
