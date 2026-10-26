@@ -158,3 +158,18 @@ yt-dlp --write-auto-sub --skip-download --sub-lang en-orig --sub-format ttml --o
 ID=_b7TAVtu3hg
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# SUIS-JE UNE IA ? (Je vous explique...)
+ID=5zBpeiFX_jA
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# REA
+ID=hP1EK6TtT7E
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# Fini les courses, elle fabrique tout chez elle pour économiser
+ID=Y-O5-auKbgQ
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
