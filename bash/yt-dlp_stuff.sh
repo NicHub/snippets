@@ -173,3 +173,8 @@ yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --o
 ID=Y-O5-auKbgQ
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# Ne donnez pas un centime à Wikipédia #wikipedia
+ID=UyNiwSEUGu8
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
