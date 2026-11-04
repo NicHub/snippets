@@ -178,3 +178,11 @@ yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --o
 ID=UyNiwSEUGu8
 URL=https://www.youtube.com/watch?v=${ID}
 yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+
+# Vos pupilles révèlent vos pensées (testez ce soir)
+ID=BGdqDvwZ4g8
+URL=https://www.youtube.com/watch?v=${ID}
+yt-dlp --list-subs "${URL}"
+yt-dlp --write-auto-sub --skip-download --sub-lang fr-orig --sub-format ttml --output "${ID}" "${URL}"
+yt-dlp --list-formats "${URL}"
+yt-dlp --list-subs --sub-lang en "${URL}"
