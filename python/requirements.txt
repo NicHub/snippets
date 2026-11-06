@@ -58,7 +58,7 @@ pint
 polars
 ppk2_api # for meshtastic
 premailer
-pygame
+pygame; python_version < '3.15'
 PyGithub
 pyperclip
 pyperclip-stubs
