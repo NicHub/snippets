@@ -21,3 +21,10 @@ zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
 
 DIRNAME=nicolas_jeanmonod-2024-04-17-inscription-unia
 zip -9r $DIRNAME.zip $DIRNAME -x "*.DS_Store" "*nozip*" "*/.*" "*playlist*"
+
+COPYFILE_DISABLE=1                                       \
+tar                                                      \
+    --exclude='.DS_Store'                                \
+    --exclude='._*'                                      \
+    -czf "$HOME/$(date '+%Y-%m-%d-%H-%M-%S')-ssh.tar.gz" \
+    -C $HOME .ssh
