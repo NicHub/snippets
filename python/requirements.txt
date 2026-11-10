@@ -93,3 +93,4 @@ wolframclient
 # yt-dlp
 yt-dlp[curl-cffi] # # Sans l’extra default : il exige urllib3>=2, incompatible avec edgeimpulse-api qui exige urllib3 < 2.
 yt-dlp-ejs
+xonsh
